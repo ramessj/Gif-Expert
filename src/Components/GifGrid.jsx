@@ -5,6 +5,8 @@ export const GifGrid = ({category}) => {
 
     const [gifs, setGifs] = useState([]);
 
+
+
     useEffect( () => {
        
               

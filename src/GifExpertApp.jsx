@@ -4,7 +4,7 @@ import { GifGrid } from './Components/GifGrid';
 
 export const GifExpertApp = () => {
 
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(['Messi']);
 
 
   const onAddCategory = (newCategory) =>{
@@ -17,9 +17,7 @@ export const GifExpertApp = () => {
       return str
           .toLowerCase()
           .split(' ')
-          .map(function(word) {
-              console.log("First capital letter: "+word[0]);
-              console.log("remain letters: "+ word.substr(1));
+          .map(function(word) {              
               return word[0].toUpperCase() + word.substr(1);
           })
           .join(' ');
