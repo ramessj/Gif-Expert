@@ -1,25 +1,32 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-const GifCard = ({ title, url }) => {
+import PropTypes from 'prop-types'
+
+export const GifCard = ({ title, url }) => {
 
     const [titleName, setTitleName] = useState(title);
-
-    const checkTitle = () => {
-        if (titleName == '') {
-            setTitleName('GIF');
+    
+    useEffect(()=>{
+        if (title == '') {
+            setTitleName('GIF')
+            
+        }else{
+            setTitleName(title)
         }
-    }
-
-    checkTitle();
+    }, [])
 
 
     return (
         <div className="card">
-            <img src={ url } alt={ title } />
-            <div className="cardSeparator"></div>
+            <img src={ url } alt={ titleName } />
+            <div className="cardSeparator"/>
             <p>{ titleName }</p>
         </div>
     )
 }
 
-export default GifCard
+GifCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
+}
+

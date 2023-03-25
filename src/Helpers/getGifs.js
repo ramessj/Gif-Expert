@@ -14,7 +14,7 @@ export const getGifs = async (category) => {
       url: images.downsized.url,
     }));
 
-    return gifs;
+    return gifs
   } else {
     const gifs = [
       {
@@ -24,6 +24,6 @@ export const getGifs = async (category) => {
       },
     ];
 
-    return gifs;
+    return gifs
   }
-};
+}
