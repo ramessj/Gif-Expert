@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
 html {
-  background-color: rgb(234, 234, 234);
-  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(234, 234, 234);  
 }
 
 body {
@@ -15,8 +16,16 @@ body {
   align-items: center;
 }
 
+h2 {
+  font-family: 'Delicious Handrawn', cursive;
+
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: rgb(97, 32, 158);
+}
+
 form {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -33,14 +42,10 @@ input {
   width: 90%;
 }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: rgb(97, 32, 158);
-}
+
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   text-align: center;
   color: rgb(92, 92, 92);
@@ -50,9 +55,9 @@ h3 {
 h3::after {
   content: "";
   position: absolute;
-  bottom: -5px;
-  left: -5%;
-  width: 110%;
+  bottom: -0.5rem;
+  left: 0;
+  width: 100%;
   border: 1px solid rgb(97, 32, 158);
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -62,6 +67,7 @@ h3::after {
 }
 
 .cardsContainer {
+  width: 100%;
   padding-top: 1.5rem;
   border-radius: 1rem;
   border-top: 1px solid rgb(97, 32, 158);
@@ -110,4 +116,17 @@ h3::after {
 .card img {
   width: 25rem;
   max-width: 100%;
+}
+
+
+@media(min-width: 500px){
+  
+  h2{
+    font-size: 4rem;
+  }
+  
+  h3{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
 }
