@@ -23,7 +23,7 @@ export const AddCategory = ({onNewCategory}) => {
 
 
   return (
-
+    
     <form onSubmit={onSubmit}>
         <input 
             type='text' 
