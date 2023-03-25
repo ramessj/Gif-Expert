@@ -104,6 +104,8 @@ h3::after {
   justify-content: center;
   margin-bottom: 20px;
   overflow: hidden;
+  max-height: 20rem;
+  max-width: 30rem;
 }
 
 .card p {
@@ -115,8 +117,10 @@ h3::after {
 }
 
 .card img {
-  width: 25rem;
-  max-width: 100%;
+  width: 100%;  
+  
+  min-height: 15rem;
+  max-height: 18rem;
 }
 
 

@@ -1,11 +1,11 @@
 import { useState } from "react"
 
-const GifCard = ({title, url}) => {
+const GifCard = ({ title, url }) => {
 
     const [titleName, setTitleName] = useState(title);
 
     const checkTitle = () => {
-        if(titleName == ''){
+        if (titleName == '') {
             setTitleName('GIF');
         }
     }
@@ -15,8 +15,8 @@ const GifCard = ({title, url}) => {
 
     return (
         <div className="card">
-            <img src={url} alt={title} />
-            <p>{titleName}</p>
+            <img src={ url } alt={ title } />
+            <p>{ titleName }</p>
         </div>
     )
 }
