@@ -16,6 +16,7 @@ const GifCard = ({ title, url }) => {
     return (
         <div className="card">
             <img src={ url } alt={ title } />
+            <div className="cardSeparator"></div>
             <p>{ titleName }</p>
         </div>
     )
