@@ -1,38 +1,43 @@
-import { useState } from "react"
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-export const AddCategory = ({onNewCategory}) => {
 
-    const [inputValue, setInputValue] = useState('');
+export const AddCategory = ( {onNewCategory} ) => {
 
-    const onInputChange = ({target}) => {
+	const [ inputValue, setInputValue ] = useState( '' );
+
+	const onInputChange = ( {target} ) => {
         
-        setInputValue( target.value);
+		setInputValue( target.value );
         
-    };
+	};
 
-    const onSubmit = (e) => {
-        e.preventDefault();
+	const onSubmit = ( e ) => {
+		e.preventDefault();
 
-        if(inputValue.trim().length <= 1) return;
+		if( inputValue.trim().length <= 1 ) return;
         
-        onNewCategory(inputValue.trim())
+		onNewCategory( inputValue.trim() );
         
-        setInputValue('');
-    }
+		setInputValue( '' );
+	};
+	
 
-
-
-  return (
+	return (
     
-    <form onSubmit={onSubmit}>
-        <input 
-            type='text' 
-            placeholder="Buscar gifs" 
-            value={inputValue} 
-            onChange={onInputChange}
-            maxLength={32} />
-    </form>
-  )
+		<form onSubmit={onSubmit}>
+			<input 
+				type='text' 
+				placeholder="Buscar gifs" 
+				value={inputValue} 
+				onChange={onInputChange}
+				maxLength={32} />
+		</form>
+	);
+};
+
+AddCategory.propTypes = {
+	onNewCategory: PropTypes.func.isRequired
 };
 
 
